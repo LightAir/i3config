@@ -1,0 +1,280 @@
+# Шрифты
+font pango: Roboto Condensed 8
+
+#palette
+set $red #AC4344
+set $green #769070
+set $blue #348899
+
+set $white #f2ebc7
+
+set $gray #979c9c
+set $custom #4C5356
+set $black #21252E
+set $dark #16100b
+
+# Настройка окон
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Pidgin"] floating enable
+for_window [class="Transmission-gtk"] floating enable
+for_window [class="Urxvtc"] floating enable
+for_window [class="Urxvt"] floating enable
+for_window [class="Nitrogen"] floating enable
+for_window [class="Skype"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [class="xpad"] floating enable
+for_window [class="dwb"] floating enable
+for_window [class="gnome-system-monitor"] floating enable
+for_window [class='Urxvt'] floating enable
+
+# Клавиша windows
+set $mod Mod4
+
+# Mouse+$mod для перемещения плавающего окна
+floating_modifier $mod
+
+# Терминал
+bindsym $mod+Return exec --no-startup-id terminology
+
+# Закрыть окно
+bindsym $mod+q kill
+
+# launcher
+#bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+Ctrl+d exec --no-startup-id rofi
+
+# Некоторые переменные
+set $up l
+set $down k
+set $left j
+set $right semicolon
+
+# Путь до папки с конфигом
+set $home /home/rain/.config/i3
+
+# Система
+#bindsym $mod+Ctrl+r exec shutdown -r now
+#bindsym $mod+Ctrl+o exec shutdown -h now 
+
+
+# фокус стрелками
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Фокус
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# Перемещение окон стрелками
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Перемещение окон
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# Разбить окно по горизонтали
+bindsym $mod+h split h
+
+# Разбить окно по вертикали
+bindsym $mod+v split v
+
+# окно в фулскрин
+bindsym $mod+f fullscreen
+
+# Лайаут stacked, tabbed, toggle split
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# фокус между tiling / floating
+bindsym $mod+space focus mode_toggle
+
+# Фокус родителя
+bindsym $mod+a focus parent
+
+# Фокус детей
+#bindsym $mod+d focus child
+
+# изменение бордюра
+bindsym $mod+t border normal
+bindsym $mod+y border 1pixel
+bindsym $mod+u border none
+
+# Переключение по воркспейсам
+bindsym $mod+z workspace prev
+bindsym $mod+x workspace next
+bindsym $mod+c workspace back_and_forth
+
+# Обои
+bindsym $mod+n exec nitrogen --sort=time
+
+################################################################################
+# Функциональные клавиши
+#
+
+# скриншотим
+bindsym $mod+F3 exec scrot
+
+# яркость
+bindsym $mod+F4 exec $home/bin/br-down.sh
+#bindsym XF86MonBrightnessDown exec $home/bin/br-down.sh
+bindsym $mod+F5 exec $home/bin/br-up.sh
+#bindsym XF86MonBrightnessUp exec $home/i3/bin/br-up.sh
+
+# громкость
+bindsym $mod+F7 exec $home/bin/vol-down.sh
+bindsym $mod+F8 exec $home/bin/vol-up.sh
+
+# плейер
+bindsym $mod+F9 exec mpc toggle
+bindsym $mod+F10 exec mpc stop
+bindsym $mod+F11 exec mpc prev
+bindsym $mod+F12 exec mpc next
+
+################################################################################
+
+# Раскидываем по воркспейсам
+assign [class="mplayer"] $WS6
+assign [class="gnome-mplayer"] $WS6
+assign [class="(?i)libreoffice"] → $WS7
+assign [class="(?i)gedit"] → $WS5
+assign [class="(?i)ristretto"] → $WS6
+assign [class="(?i)feh"] → $WS6
+assign [class="(?i)okular"] → $WS6
+assign [class="(?i)firefox"] → $WS3
+assign [class="(?i)chromium"] → $WS3
+assign [class="(?i)pidgin"] → $WS2
+assign [class="(?i)transmission-gtk"] → $WS2
+assign [class="(?i)ktorrent"] → $WS2
+assign [class="(?i)nitrogen"] → $WS7
+assign [class="(?i)gimp"] → $WS8
+assign [class="(?i)atom"] → $WS5
+assign [class="(?i)inkscape"] → $WS8
+assign [class="(?i)blender"] → $WS8
+
+# окно в scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+
+# gaps
+set $default_gaps_inner 6
+set $default_gaps_outer 10
+
+gaps inner $default_gaps_inner
+gaps outer $default_gaps_outer
+
+# воркспейсы
+set $WS1 1:
+set $WS2 2:
+set $WS3 3:
+set $WS4 4:
+set $WS5 5:
+set $WS6 6:
+set $WS7 7:
+set $WS8 8:
+set $WS9 9:
+
+# Переключение по воркспейсам
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
+bindsym $mod+5 workspace $WS5
+bindsym $mod+6 workspace $WS6
+bindsym $mod+7 workspace $WS7
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+bindsym $mod+0 workspace 10
+
+# перемещение в воркспейс
+bindsym $mod+Shift+1 move container to workspace $WS1
+bindsym $mod+Shift+2 move container to workspace $WS2
+bindsym $mod+Shift+3 move container to workspace $WS3
+bindsym $mod+Shift+4 move container to workspace $WS4
+bindsym $mod+Shift+5 move container to workspace $WS5
+bindsym $mod+Shift+6 move container to workspace $WS6
+bindsym $mod+Shift+7 move container to workspace $WS7
+bindsym $mod+Shift+8 move container to workspace $WS8
+bindsym $mod+Shift+9 move container to workspace $WS9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# Перечитать файл конфига
+bindsym $mod+Shift+c reload
+
+# Перезапуск wm. ()Сохраняет лэйаут)
+bindsym $mod+Shift+r restart
+
+# Выход (из X сессии)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Вы действительно хотите выйти?' -b 'Выход' 'i3-msg exit'"
+
+# Ресайз окна (Можно юзать мышь)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 pptbindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +10% && killall -SIGUSR1 i3status
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Поребрик =)
+new_window pixel 1
+new_float pixel 0
+
+# Красим окна
+# class                 border  backgr. text    indicator
+client.focused          $black $black $white $blue
+client.focused_inactive $gray $gray $black $black
+client.unfocused        $gray $gray $black $black
+client.urgent           $white $white $black $red
+client.placeholder      $black $black $white $black
+
+# "Автозапуск"
+exec $home/bin/autostart.sh
+
+bar {
+    status_command i3status -c $home/i3status
+    position top
+    colors {
+        background $black
+        statusline $white
+        separator  $gray
+
+        # ws               border  bg      text
+        focused_workspace  $green  $green  $white
+        active_workspace   $blue   $blue   $white
+        inactive_workspace $custom $custom $white
+        urgent_workspace   $red    $red    $white
+    }
+}
