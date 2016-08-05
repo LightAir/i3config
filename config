@@ -1,31 +1,15 @@
-# Шрифты
+# Шрифт
 font pango: Roboto Condensed 8
 
-#palette
+# Цвветовая палитра
 set $red #AC4344
 set $green #769070
 set $blue #348899
-
 set $white #f2ebc7
-
 set $gray #979c9c
 set $custom #4C5356
 set $black #21252E
 set $dark #16100b
-
-# Настройка окон
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Pidgin"] floating enable
-for_window [class="Transmission-gtk"] floating enable
-for_window [class="Urxvtc"] floating enable
-for_window [class="Urxvt"] floating enable
-for_window [class="Nitrogen"] floating enable
-for_window [class="Skype"] floating enable
-for_window [window_role="pop-up"] floating enable
-for_window [class="xpad"] floating enable
-for_window [class="dwb"] floating enable
-for_window [class="gnome-system-monitor"] floating enable
-for_window [class='Urxvt'] floating enable
 
 # Клавиша windows
 set $mod Mod4
@@ -54,8 +38,8 @@ set $right semicolon
 set $home /home/rain/.config/i3
 
 # Система
-#bindsym $mod+Ctrl+r exec shutdown -r now
-#bindsym $mod+Ctrl+o exec shutdown -h now 
+bindsym $mod+Ctrl+r exec shutdown -r now
+bindsym $mod+Ctrl+o exec shutdown -h now
 
 
 # фокус стрелками
@@ -144,26 +128,36 @@ bindsym $mod+F10 exec mpc stop
 bindsym $mod+F11 exec mpc prev
 bindsym $mod+F12 exec mpc next
 
-################################################################################
 
+# Настройка окон
+for_window [class="(i?)ktorrent"] floating enable
+for_window [class="Nitrogen"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [class="xpad"] floating enable
+
+################################################################################
 # Раскидываем по воркспейсам
-assign [class="mplayer"] $WS6
-assign [class="gnome-mplayer"] $WS6
-assign [class="(?i)libreoffice"] → $WS7
-assign [class="(?i)gedit"] → $WS5
-assign [class="(?i)ristretto"] → $WS6
-assign [class="(?i)feh"] → $WS6
-assign [class="(?i)okular"] → $WS6
+
+assign [class="(?i)ktorrent"] → $WS2
+
 assign [class="(?i)firefox"] → $WS3
 assign [class="(?i)chromium"] → $WS3
-assign [class="(?i)pidgin"] → $WS2
-assign [class="(?i)transmission-gtk"] → $WS2
-assign [class="(?i)ktorrent"] → $WS2
-assign [class="(?i)nitrogen"] → $WS7
-assign [class="(?i)gimp"] → $WS8
+
+assign [class="(?i)smplayer"] $WS4
+
 assign [class="(?i)atom"] → $WS5
+
+assign [class="(?i)ristretto"] → $WS6
+assign [class="(?i)gwenview"] → $WS6
+assign [class="(?i)okular"] → $WS6
+
+assign [class="(?i)libreoffice"] → $WS7
+
+assign [class="(?i)gimp"] → $WS8
 assign [class="(?i)inkscape"] → $WS8
 assign [class="(?i)blender"] → $WS8
+
+assign [class="(?i)nitrogen"] → $WS10
 
 # окно в scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -181,14 +175,15 @@ gaps outer $default_gaps_outer
 
 # воркспейсы
 set $WS1 1:
-set $WS2 2:
+set $WS2 2:
 set $WS3 3:
 set $WS4 4:
-set $WS5 5:
+set $WS5 5:
 set $WS6 6:
-set $WS7 7:
-set $WS8 8:
+set $WS7 7:
+set $WS8 8:
 set $WS9 9:
+set $WS10 10:
 
 # Переключение по воркспейсам
 bindsym $mod+1 workspace $WS1
@@ -200,7 +195,7 @@ bindsym $mod+6 workspace $WS6
 bindsym $mod+7 workspace $WS7
 bindsym $mod+8 workspace $WS8
 bindsym $mod+9 workspace $WS9
-bindsym $mod+0 workspace 10
+bindsym $mod+0 workspace $WS10
 
 # перемещение в воркспейс
 bindsym $mod+Shift+1 move container to workspace $WS1
@@ -212,7 +207,7 @@ bindsym $mod+Shift+6 move container to workspace $WS6
 bindsym $mod+Shift+7 move container to workspace $WS7
 bindsym $mod+Shift+8 move container to workspace $WS8
 bindsym $mod+Shift+9 move container to workspace $WS9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+0 move container to workspace $WS10
 
 # Перечитать файл конфига
 bindsym $mod+Shift+c reload
