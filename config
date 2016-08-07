@@ -47,6 +47,15 @@ set $home /home/rain/.config/i3
 bindcode $mod+Ctrl+27 exec shutdown -r now
 # mod + ctrl + o
 bindcode $mod+Ctrl+32 exec shutdown -h now
+# Перечитать файл конфига
+# Mod + shift + c
+bindcode $mod+Shift+54 reload
+# Перезапуск wm. (Сохраняет лэйаут)
+# Mod + shift + r
+bindcode $mod+Shift+27 restart
+# Выход (из X сессии)
+# Mod + shift + e
+bindcode $mod+Shift+26 exec "i3-nagbar -t warning -m 'Вы действительно хотите выйти?' -b 'Выход' 'i3-msg exit'"
 
 # Раскладки
 bindsym $mod+Ctrl+semicolon exec --no-startup-id $home/bin/set-dvorak.sh
@@ -125,10 +134,11 @@ bindcode $mod+54 workspace back_and_forth
 # Обои
 # Mod + n
 bindcode $mod+57 exec nitrogen --sort=time
+# Mod + b
+bindcode $mod+56 exec --no-startup-id chromium
 
 ################################################################################
 # Функциональные клавиши
-#
 
 # скриншотим
 bindsym $mod+F3 exec scrot
@@ -232,18 +242,6 @@ bindcode $mod+Shift+16 move container to workspace $WS7
 bindcode $mod+Shift+17 move container to workspace $WS8
 bindcode $mod+Shift+18 move container to workspace $WS9
 bindcode $mod+Shift+19 move container to workspace $WS10
-
-# Перечитать файл конфига
-# Mod + shift + c
-bindcode $mod+Shift+54 reload
-
-# Перезапуск wm. (Сохраняет лэйаут)
-# Mod + shift + r
-bindcode $mod+Shift+27 restart
-
-# Выход (из X сессии)
-# Mod + shift + e
-bindcode $mod+Shift+26 exec "i3-nagbar -t warning -m 'Вы действительно хотите выйти?' -b 'Выход' 'i3-msg exit'"
 
 # Ресайз окна (Можно юзать мышь)
 mode "resize" {
