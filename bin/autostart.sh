@@ -22,3 +22,6 @@ volnoti -T "dark"
 
 # раскладка
 setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle" &
+
+# клипбоард
+# clipit &
