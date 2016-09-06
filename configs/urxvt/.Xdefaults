@@ -1,14 +1,41 @@
+Xcursor.theme: Adwaitay
+
+
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #21252e, #4c5356, #f2ebc7
+rofi.color-normal: #21252e, #f2ebc7, #21252e, #769070, #f2ebc7
+rofi.color-active: #21252e, #769070, #21252e, #769070, #21252e
+rofi.color-urgent: #21252e, #ac4344, #21252e, #ac4344, #f2ebc7
+
+
+
+! ------------------------------------------------------------------------------
+! urxvt
+! ------------------------------------------------------------------------------
+
+! scrollbar
 URxvt.scrollBar: false
 URxvt.scrollstyle: next
-URxvt.font: xft:DejaVuSansMono:size=9
 
+URxvt*scrollTtyOutput: False
+! прокрутка по нажатию клавиши
+URxvt*scrollTtyKeypress: true
+URxvt*scrollWithBuffer: true
+URxvt*secondaryScroll: true
+
+! font
+URxvt*font: xft:DejaVu Sans Mono:style=Book:pixelsize=13
+URxvt.letterSpace: -1
+
+! colors
 ! Background color (black)
 URxvt*background: #21252E
-
-! Цвет шрифта (white)
+! Font color (white)
 URxvt*foreground: #F2EBE5
-
-! Другие цвета
 ! black
 URxvt*color0: #21252E
 ! red
@@ -23,10 +50,12 @@ URxvt*color4: #348899
 URxvt*color5: #AC404F
 ! cyan
 URxvt*color6: #0077A6
+! gray
 URxvt*color7: gray90
+! gray
 URxvt*color8: grey50
 ! red
-URxvt*color9: #AC4344 
+URxvt*color9: #AC4344
 ! green
 URxvt*color10: #769070
 ! yellow
@@ -39,3 +68,7 @@ URxvt*color13: #AC404F
 URxvt*color14: #0077A6
 ! white
 URxvt*color15: #f2ebc7
+
+
+URxvt*saveLines: 5000
+

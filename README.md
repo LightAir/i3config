@@ -1,8 +1,5 @@
 # i3config
 
-## Скриншот
-![scrrenshot](https://raw.githubusercontent.com/LightAir/i3config/master/screenshots/screenshot.png)
-
 ## Горячие клавишы
 
 | Комбинация           | Действие |
@@ -62,3 +59,7 @@
 | **Win + Ctrl + s**   | Установить стандартные раскладки|
 
 
+## Скриншоты
+![scrrenshot](https://raw.githubusercontent.com/LightAir/i3config/master/screenshots/main.png)
+
+![scrrenshot](https://raw.githubusercontent.com/LightAir/i3config/master/screenshots/urxvt.png)

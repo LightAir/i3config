@@ -18,7 +18,8 @@ set $mod Mod4
 floating_modifier $mod
 
 # Терминал
-bindsym $mod+Return exec --no-startup-id terminology
+bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Shift+Return exec --no-startup-id terminology
 
 # Закрыть окно mod + q
 bindcode $mod+24 kill
