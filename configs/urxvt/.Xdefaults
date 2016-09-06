@@ -1,32 +1,41 @@
 URxvt.scrollBar: false
 URxvt.scrollstyle: next
-URxvt.font: xft:RobotoCondensed:size=10
+URxvt.font: xft:DejaVuSansMono:size=9
 
 ! Background color (black)
 URxvt*background: #21252E
 
 ! Цвет шрифта (white)
-URxvt*foreground: #f2ebc7
+URxvt*foreground: #F2EBE5
 
 ! Другие цвета
-!black
+! black
 URxvt*color0: #21252E
-URxvt*color1: red3
-URxvt*color2: green3
-URxvt*color3: yellow3
-URxvt*color4: blue2
-URxvt*color5: magenta3
-URxvt*color6: cyan3
+! red
+URxvt*color1: #AC4344
+! green
+URxvt*color2: #769070
+! yellow
+URxvt*color3: #DB9E36
+! blue
+URxvt*color4: #348899
+! magenta
+URxvt*color5: #AC404F
+! cyan
+URxvt*color6: #0077A6
 URxvt*color7: gray90
 URxvt*color8: grey50
 ! red
 URxvt*color9: #AC4344 
 ! green
 URxvt*color10: #769070
-URxvt*color11: yellow
+! yellow
+URxvt*color11: #DB9E36
 ! blue
 URxvt*color12: #348899
-URxvt*color13: magenta
-URxvt*color14: cyan
+! magenta
+URxvt*color13: #AC404F
+! cyan
+URxvt*color14: #0077A6
 ! white
 URxvt*color15: #f2ebc7
