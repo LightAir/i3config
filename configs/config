@@ -1,36 +1,67 @@
-# Шрифт
-font pango: Roboto Condensed 8
+#--------------------------------------
+# Секция настройки шрифтов
+#--------------------------------------
 
-# Цвветовая палитра
-set $red #AC4344
-set $green #769070
-set $blue #348899
-set $white #f2ebc7
-set $gray #979c9c
-set $custom #4C5356
-set $black #21252E
-set $dark #16100b
+font pango: Roboto Condensed 9
+
+
+#--------------------------------------
+# Секция переменных
+#--------------------------------------
+
+# Доступная палитра
+# #EF5571 #8BABB6 #8BB3CC #E59757
+# #C0A2BA #85B988 #C4BE67 #EE6555
+# #DEDEDE #626262 #D64937 #21252E
+
+# Цвета классы
+set $cbfocol #DEDEDE
+set $cbgfocol #DEDEDE
+set $ctfocol #DEDEDE
+set $cifocol #DEDEDE
+set $cbficol #DEDEDE
+set $cbgficol #DEDEDE
+set $ctficol #DEDEDE
+set $cificol #DEDEDE
+set $cbuncol #DEDEDE
+set $cbguncol #DEDEDE
+set $ctuncol #DEDEDE
+set $ciuncol #DEDEDE
+set $cburcol #DEDEDE
+set $cbgurcol #DEDEDE
+set $cturcol #DEDEDE
+set $ciurcol #DEDEDE
+set $cbplcol #DEDEDE
+set $cbgplcol #DEDEDE
+set $ctplcol #DEDEDE
+set $ciplcol #DEDEDE
+
+# цвета ws
+set $wbgcolor #21252E
+set $wstcolor #f2ebc7
+set $wspcolor #f2ebc7
+set $fwbcolor #21252E
+set $fwbgcolor #769070
+set $fwtcolor #16100b
+set $awbcolor #21252E
+set $awbgcolor #348899
+set $awtcolor #16100b
+set $iwbcolor #21252E
+set $iwbgcolor #4C5356
+set $iwtcolor #16100b
+set $uwbcolor #21252E
+set $uwbgcolor #AC4344
+set $uwtcolor #16100b
+
+# gaps
+set $gaps_inner 6
+set $gaps_outer 10
+
+# Путь до папки с конфигом
+set $home /home/rain/.config/i3
 
 # Клавиша windows
 set $mod Mod4
-
-# Mouse+$mod для перемещения плавающего окна
-floating_modifier $mod
-
-# Терминал
-bindsym $mod+Return exec --no-startup-id urxvt
-bindsym $mod+Shift+Return exec --no-startup-id terminology
-
-# Закрыть окно mod + q
-bindcode $mod+24 kill
-
-# launcher mod + d
-bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-
-#bindcode $mod+40 exec --no-startup-id dmenu_run
-#bindsym $mod+Ctrl+d exec --no-startup-id rofi
-
-# Некоторые переменные
 # l
 set $up 46
 # k
@@ -40,8 +71,33 @@ set $left 44
 # ;
 set $right 47
 
-# Путь до папки с конфигом
-set $home /home/rain/.config/i3
+# воркспейсы
+set $ws1 1:
+set $ws2 2:
+set $ws3 3:
+set $ws4 4:
+set $ws5 5:
+set $ws6 6:
+set $ws7 7:
+set $ws8 8:
+set $ws9 9:
+set $ws10 10:
+
+
+#--------------------------------------
+# Бинд секция
+#--------------------------------------
+
+# Терминал
+bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Shift+Return exec --no-startup-id terminology
+
+# Закрыть окно mod + q
+bindcode $mod+24 kill
+
+# launcher mod + d
+bindcode $mod+40 exec --no-startup-id $home/bin/dmenu.sh
+bindsym $mod+Ctrl+d exec --no-startup-id rofi
 
 # Система
 # mod + ctrl + r
@@ -138,59 +194,31 @@ bindcode $mod+57 exec nitrogen --sort=time
 # Mod + b
 bindcode $mod+56 exec --no-startup-id chromium
 
-################################################################################
 # Функциональные клавиши
-
-# скриншотим
+## скриншотим
 bindsym $mod+F3 exec scrot
 
-# яркость
+## яркость
 bindsym $mod+F4 exec --no-startup-id $home/bin/br-down.sh
 #bindsym XF86MonBrightnessDown exec --no-startup-id $home/bin/br-down.sh
 bindsym $mod+F5 exec --no-startup-id $home/bin/br-up.sh
 #bindsym XF86MonBrightnessUp exec --no-startup-id $home/i3/bin/br-up.sh
 
-# громкость
+## громкость
 bindsym $mod+F7 exec --no-startup-id $home/bin/vol-down.sh
 bindsym $mod+F8 exec --no-startup-id $home/bin/vol-up.sh
 
-# плейер
+## плейер
 bindsym $mod+F9 exec --no-startup-id mpc toggle
 bindsym $mod+F10 exec --no-startup-id mpc stop
 bindsym $mod+F11 exec --no-startup-id mpc prev
 bindsym $mod+F12 exec --no-startup-id mpc next
 
-
-# Настройка окон
+## Настройка окон
 for_window [class="(i?)ktorrent"] floating enable
 for_window [class="Nitrogen"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [class="xpad"] floating enable
-
-################################################################################
-# Раскидываем по воркспейсам
-
-assign [class="(?i)ktorrent"] → $WS2
-
-assign [class="(?i)firefox"] → $WS3
-assign [class="(?i)chromium"] → $WS3
-
-assign [class="(?i)smplayer"] $WS4
-
-assign [class="(?i)atom"] → $WS5
-
-assign [class="(?i)ristretto"] → $WS6
-assign [class="(?i)gwenview"] → $WS6
-assign [class="(?i)okular"] → $WS6
-assign [class="Viewnior"] $ws6
-
-assign [class="(?i)libreoffice"] → $WS7
-
-assign [class="(?i)gimp"] → $WS8
-assign [class="(?i)inkscape"] → $WS8
-assign [class="(?i)blender"] → $WS8
-
-assign [class="(?i)nitrogen"] → $WS10
 
 # окно в scratchpad Mod + shift + -
 bindcode $mod+Shift+20 move scratchpad
@@ -199,50 +227,35 @@ bindcode $mod+Shift+20 move scratchpad
 # Mod + -
 bindcode $mod+20 scratchpad show
 
-# gaps
-set $default_gaps_inner 6
-set $default_gaps_outer 10
-
-gaps inner $default_gaps_inner
-gaps outer $default_gaps_outer
-
-# воркспейсы
-set $WS1 1:
-set $WS2 2:
-set $WS3 3:
-set $WS4 4:
-set $WS5 5:
-set $WS6 6:
-set $WS7 7:
-set $WS8 8:
-set $WS9 9:
-set $WS10 10:
-
 # Переключение по воркспейсам
 # Mod + 1..9, 0
-bindcode $mod+10 workspace $WS1
-bindcode $mod+11 workspace $WS2
-bindcode $mod+12 workspace $WS3
-bindcode $mod+13 workspace $WS4
-bindcode $mod+14 workspace $WS5
-bindcode $mod+15 workspace $WS6
-bindcode $mod+16 workspace $WS7
-bindcode $mod+17 workspace $WS8
-bindcode $mod+18 workspace $WS9
-bindcode $mod+19 workspace $WS10
+bindcode $mod+10 workspace $ws1
+bindcode $mod+11 workspace $ws2
+bindcode $mod+12 workspace $ws3
+bindcode $mod+13 workspace $ws4
+bindcode $mod+14 workspace $ws5
+bindcode $mod+15 workspace $ws6
+bindcode $mod+16 workspace $ws7
+bindcode $mod+17 workspace $ws8
+bindcode $mod+18 workspace $ws9
+bindcode $mod+19 workspace $ws10
 
 # Перемещение в воркспейс
 # Mod + shift + 1..9, 0
-bindcode $mod+Shift+10 move container to workspace $WS1
-bindcode $mod+Shift+11 move container to workspace $WS2
-bindcode $mod+Shift+12 move container to workspace $WS3
-bindcode $mod+Shift+13 move container to workspace $WS4
-bindcode $mod+Shift+14 move container to workspace $WS5
-bindcode $mod+Shift+15 move container to workspace $WS6
-bindcode $mod+Shift+16 move container to workspace $WS7
-bindcode $mod+Shift+17 move container to workspace $WS8
-bindcode $mod+Shift+18 move container to workspace $WS9
-bindcode $mod+Shift+19 move container to workspace $WS10
+bindcode $mod+Shift+10 move container to workspace $ws1
+bindcode $mod+Shift+11 move container to workspace $ws2
+bindcode $mod+Shift+12 move container to workspace $ws3
+bindcode $mod+Shift+13 move container to workspace $ws4
+bindcode $mod+Shift+14 move container to workspace $ws5
+bindcode $mod+Shift+15 move container to workspace $ws6
+bindcode $mod+Shift+16 move container to workspace $ws7
+bindcode $mod+Shift+17 move container to workspace $ws8
+bindcode $mod+Shift+18 move container to workspace $ws9
+bindcode $mod+Shift+19 move container to workspace $ws10
+
+# Mod + shift + r
+bindcode $mod+27 mode "resize"
+
 
 # Ресайз окна (Можно юзать мышь)
 mode "resize" {
@@ -267,27 +280,74 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# Mod + shift + r
-bindcode $mod+27 mode "resize"
+
+#--------------------------------------
+# Секция assign
+#--------------------------------------
+
+# Раскидываем по воркспейсам
+
+assign [class="(?i)ktorrent"] → $ws2
+
+assign [class="(?i)firefox"] → $ws3
+assign [class="(?i)chromium"] → $ws3
+
+assign [class="(?i)smplayer"] $ws4
+
+assign [class="(?i)atom"] → $ws5
+
+assign [class="(?i)ristretto"] → $ws6
+assign [class="(?i)gwenview"] → $ws6
+assign [class="(?i)okular"] → $ws6
+assign [class="Viewnior"] $ws6
+
+assign [class="(?i)libreoffice"] → $ws7
+
+assign [class="(?i)gimp"] → $ws8
+assign [class="(?i)inkscape"] → $ws8
+assign [class="(?i)blender"] → $ws8
+
+assign [class="(?i)nitrogen"] → $ws10
+
+
+#--------------------------------------
+# Другие параметры
+#--------------------------------------
+
+# Mouse+$mod для перемещения плавающего окна
+floating_modifier $mod
+
+gaps inner $gaps_inner
+gaps outer $gaps_outer
 
 # Поребрик =)
-new_window pixel 1
-new_float pixel 0
+new_window none
+new_float pixel 2
+
+hide_edge_borders both
 
 # Красим окна
-# class                 border  backgr. text    indicator
-client.focused          $black $black $white $blue
-client.focused_inactive $gray $gray $black $black
-client.unfocused        $gray $gray $black $black
-client.urgent           $white $white $black $red
-client.placeholder      $black $black $white $black
+# class                 border   backgr.   text     indicator
+client.focused          $cbfocol $cbgfocol $ctfocol $cifocol
+client.focused_inactive $cbficol $cbgficol $ctficol $cificol
+client.unfocused        $cbuncol $cbguncol $ctuncol $ciuncol
+client.urgent           $cburcol $cbgurcol $cturcol $ciurcol
+client.placeholder      $cbplcol $cbgplcol $ctplcol $ciplcol
 
-# "Автозапуск"
+client.background       #ffffff
+#--------------------------------------
+# Автозагрузка
+#--------------------------------------
+
 exec --no-startup-id $home/bin/autostart.sh
+
+
+#--------------------------------------
+# Бар
+#--------------------------------------
 
 bar {
     font pango: Roboto Condensed 9
-    #font pango:Ubuntu 9
     status_command i3status -c $home/i3status
     position top
     workspace_buttons yes
@@ -296,14 +356,14 @@ bar {
     tray_padding 1
     separator_symbol ""
     colors {
-        background $black
-        statusline $white
-        separator  $custom
+        background $wbgcolor
+        statusline $wstcolor
+        separator  $wspcolor
 
-        # ws               border  bg      text
-        focused_workspace  $green  $green  $white
-        active_workspace   $blue   $blue   $white
-        inactive_workspace $custom $custom $white
-        urgent_workspace   $red    $red    $white
+        # ws               border     bg         text
+        focused_workspace  $fwbcolor  $fwbgcolor  $fwtcolor
+        active_workspace   $awbcolor  $awbgcolor  $awtcolor
+        inactive_workspace $iwbcolor  $iwbgcolor  $iwtcolor
+        urgent_workspace   $uwbcolor  $uwbgcolor  $uwtcolor
     }
 }
