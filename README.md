@@ -20,7 +20,26 @@ Run ```python i3switch.py theme_name```, where theme_name theme from "themes" fo
 ## Горячие клавишы
 [hotkeys](hotkeys.md)
 
-## Скриншоты
-![scrrenshot](https://raw.githubusercontent.com/LightAir/i3config/master/screenshots/main.png)
+# Themes
+## dark
 
-![scrrenshot](https://raw.githubusercontent.com/LightAir/i3config/master/screenshots/urxvt.png)
+![scrrenshot](/screenshots/dark-desktop.png)
+
+![scrrenshot](/screenshots/dark-urxvt.png)
+
+![scrrenshot](/screenshots/dark-workspace.png)
+
+## white-red
+
+![scrrenshot](/screenshots/wr-desktop.png)
+
+![scrrenshot](/screenshots/wr-urxvt.png)
+
+![scrrenshot](/screenshots/wr-workspace.png)
+
+## gray
+![scrrenshot](/screenshots/gray-desktop.png)
+
+![scrrenshot](/screenshots/gray-urxvt.png)
+
+![scrrenshot](/screenshots/gray-workspace.png)
