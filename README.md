@@ -3,6 +3,23 @@ The configuration includes i3 theme switcher.
 
 Конфигураци включает в себя i3 theme switcher.
 
+## Зависимости
+## Depends
+
+[i3-gaps](https://aur.archlinux.org/packages/i3-gaps-git/)
+
+[dmenu](https://www.archlinux.org/packages/?name=dmenu)
+
+[Font Roboto Condensed](https://aur.archlinux.org/packages/ttf-roboto/)
+
+[Font Awesome](https://aur.archlinux.org/packages/ttf-font-awesome/)
+
+[DvorakRus](https://github.com/LightAir/DvorakRus)
+
+[tvolnoti](https://github.com/LightAir/tvolnoti)
+
+nitrogen, mpd, compton, lxpolkit, xrandr, xbacklight
+
 ## Install
 Copy the entire contents of the directory in ~/.config/i3
 
