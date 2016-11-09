@@ -1,5 +1,10 @@
 #!/bin/bash
 # Перечитать конфиг без перезапуска иксов
+#
+# XDG_CURRENT_DESKTOP=kde
+# QT_QPA_PLATFORM=kde
+# QT_QPA_PLATFORM_THEME=kde
+
 xrdb ~/.Xdefaults &
 
 # Два моника
@@ -26,3 +31,6 @@ setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle" &
 
 # клипбоард
 # clipit &
+
+# Локер
+# ./locker.sh &

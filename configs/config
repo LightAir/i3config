@@ -97,7 +97,9 @@ bindcode $mod+24 kill
 
 # launcher mod + d
 bindcode $mod+40 exec --no-startup-id $home/bin/dmenu.sh
-bindsym $mod+Ctrl+d exec --no-startup-id rofi
+bindcode $mod+Ctrl+40 exec --no-startup-id rofi
+# http://www.webupd8.org/2016/06/how-to-get-unity-like-hud-searchable.html
+# bindcode $mod+38 exec ~/.config/i3/bin/i3-hud-menu.py
 
 # Система
 # mod + ctrl + r
@@ -113,6 +115,8 @@ bindcode $mod+Shift+27 restart
 # Выход (из X сессии)
 # Mod + shift + e
 bindcode $mod+Shift+26 exec "i3-nagbar -t warning -m 'Вы действительно хотите выйти?' -b 'Выход' 'i3-msg exit'"
+# Lock Mod + shift + l
+bindcode $mod+Ctrl+46 exec "xautolock -locknow"
 
 # Раскладки
 bindsym $mod+Ctrl+semicolon exec --no-startup-id $home/bin/set-dvorak.sh
@@ -191,8 +195,14 @@ bindcode $mod+54 workspace back_and_forth
 # Обои
 # Mod + n
 bindcode $mod+57 exec nitrogen --sort=time
+
+# Браузер
 # Mod + b
-bindcode $mod+56 exec --no-startup-id chromium
+bindcode $mod+56 exec $home/bin/apprun/browser.sh
+
+# IDE
+# Mod + m
+bindcode $mod+58 exec $home/bin/apprun/ide.sh
 
 # Функциональные клавиши
 ## скриншотим
@@ -255,7 +265,6 @@ bindcode $mod+Shift+19 move container to workspace $ws10
 
 # Mod + shift + r
 bindcode $mod+27 mode "resize"
-
 
 # Ресайз окна (Можно юзать мышь)
 mode "resize" {
@@ -340,7 +349,7 @@ client.background       #ffffff
 #--------------------------------------
 
 exec --no-startup-id $home/bin/autostart.sh
-
+# exec --no-startup-id $home/bin/i3-appmenu-service.py
 
 #--------------------------------------
 # Бар
