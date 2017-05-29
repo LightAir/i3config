@@ -33,7 +33,7 @@ def cb_dmenu(val, colors):
 
 
 def replace(old_path, new_path, reg, colors, cb):
-    """ Поиск и замена в файле по регулярному выражению"""
+    """find and replace"""
     old = open(old_path, "r")
     new = open(new_path, "w")
 
