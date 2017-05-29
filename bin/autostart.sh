@@ -8,6 +8,7 @@
 xrdb ~/.Xdefaults &
 
 # Два моника
+# for two monitors
 xrandr --output LVDS1 --mode 1366x768 --pos 0x0 --output VGA1 --mode 1920x1080 --pos -1920x0 &
 
 # lxpolkit
