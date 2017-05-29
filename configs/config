@@ -58,6 +58,7 @@ set $gaps_inner 6
 set $gaps_outer 10
 
 # Путь до папки с конфигом
+# Config folder path
 set $home /home/rain/.config/i3
 
 # Клавиша windows
