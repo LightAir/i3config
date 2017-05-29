@@ -23,12 +23,16 @@ nitrogen, mpd, compton, lxpolkit, xrandr, xbacklight
 ## Install
 Copy the entire contents of the directory in ~/.config/i3
 
+Set path for config dir in i3config/configs/config file (line 62)
+
 Go to the folder ~/.config/i3/bin
 
 Run ```python i3switch.py theme_name```, where theme_name theme from "themes" folder
 
 ## Установка
 Скопировать всё содержимое этой директории в ~/.config/i3
+
+Установите путь к директории с конфигурационнным файлом в файле i3config/configs/config (строка 62)
 
 Перейти в папку ~/.config/i3/bin
 
