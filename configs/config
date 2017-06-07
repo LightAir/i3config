@@ -59,7 +59,7 @@ set $gaps_outer 10
 
 # Путь до папки с конфигом
 # Config folder path
-set $home /home/rain/.config/i3
+set $home ~/.config/i3
 
 # Клавиша windows
 set $mod Mod4
@@ -358,6 +358,8 @@ exec --no-startup-id $home/bin/autostart.sh
 
 bar {
     font pango: Roboto Condensed 9
+    # for luastatus
+    # status_command cd ~/.config/i3/luastatus && exec luastatus-i3-wrapper -B no_separators cpu-usage.lua time-battery.lua alsa.lua xkb
     status_command i3status -c $home/i3status
     position top
     workspace_buttons yes
