@@ -15,51 +15,51 @@ font pango: Roboto Condensed 9
 # #DEDEDE #626262 #D64937 #21252E
 
 # Цвета классы
-set $cbfocol #DEDEDE
-set $cbgfocol #DEDEDE
-set $ctfocol #DEDEDE
-set $cifocol #DEDEDE
-set $cbficol #DEDEDE
-set $cbgficol #DEDEDE
-set $ctficol #DEDEDE
-set $cificol #DEDEDE
-set $cbuncol #DEDEDE
-set $cbguncol #DEDEDE
-set $ctuncol #DEDEDE
-set $ciuncol #DEDEDE
-set $cburcol #DEDEDE
-set $cbgurcol #DEDEDE
-set $cturcol #DEDEDE
-set $ciurcol #DEDEDE
-set $cbplcol #DEDEDE
-set $cbgplcol #DEDEDE
-set $ctplcol #DEDEDE
-set $ciplcol #DEDEDE
+set $cbfocol #F2EBC7
+set $cbgfocol #F2EBC7
+set $ctfocol #F2EBC7
+set $cifocol #F2EBC7
+set $cbficol #348899
+set $cbgficol #348899
+set $ctficol #21252E
+set $cificol #21252E
+set $cbuncol #6C6C6C
+set $cbguncol #6C6C6C
+set $ctuncol #F2EBC7
+set $ciuncol #F2EBC7
+set $cburcol #AC4344
+set $cbgurcol #AC4344
+set $cturcol #F2EBC7
+set $ciurcol #F2EBC7
+set $cbplcol #FBD977
+set $cbgplcol #FBD977
+set $ctplcol #21252E
+set $ciplcol #21252E
 
 # цвета ws
 set $wbgcolor #21252E
-set $wstcolor #f2ebc7
-set $wspcolor #f2ebc7
-set $fwbcolor #21252E
+set $wstcolor #F2EBC7
+set $wspcolor #F2EBC7
+set $fwbcolor #769070
 set $fwbgcolor #769070
-set $fwtcolor #16100b
-set $awbcolor #21252E
-set $awbgcolor #348899
-set $awtcolor #16100b
+set $fwtcolor #F2EBC7
+set $awbcolor #F2EBC7
+set $awbgcolor #F2EBC7
+set $awtcolor #21252E
 set $iwbcolor #21252E
-set $iwbgcolor #4C5356
-set $iwtcolor #16100b
-set $uwbcolor #21252E
+set $iwbgcolor #21252E
+set $iwtcolor #F2EBC7
+set $uwbcolor #AC4344
 set $uwbgcolor #AC4344
-set $uwtcolor #16100b
+set $uwtcolor #F2EBC7
 
 # gaps
-set $gaps_inner 6
-set $gaps_outer 10
+set $gaps_inner 8
+set $gaps_outer 2
 
 # Путь до папки с конфигом
 # Config folder path
-set $home ~/.config/i3
+set $home /home/la/.config/i3/
 
 # Клавиша windows
 set $mod Mod4
