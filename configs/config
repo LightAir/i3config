@@ -91,14 +91,23 @@ set $ws10 10:
 
 # Терминал
 bindsym $mod+Return exec --no-startup-id urxvt
-bindsym $mod+Shift+Return exec --no-startup-id terminology
+
+#bindsym $mod+Shift+Return exec --no-startup-id terminology
 
 # Закрыть окно mod + q
 bindcode $mod+24 kill
 
-# launcher mod + d
-bindcode $mod+40 exec --no-startup-id $home/bin/dmenu.sh
-bindcode $mod+Ctrl+40 exec --no-startup-id rofi
+# launcher dmenu2 mod + Ctrl + d
+bindcode $mod+Ctrl+40 exec --no-startup-id $home/bin/dmenu.sh
+
+# launcher louncher mod + d
+bindcode $mod+40 exec --no-startup-id rofi -show run
+
+# Mod + Ctrl + w
+bindcode $mod+Ctrl+25 exec --no-startup-id rofi -show window
+# Mod + Ctrl + s
+# bindcode $mod+Ctrl+39 exec --no-startup-id rofi -show ssh
+
 # http://www.webupd8.org/2016/06/how-to-get-unity-like-hud-searchable.html
 # bindcode $mod+38 exec ~/.config/i3/bin/i3-hud-menu.py
 
@@ -298,6 +307,7 @@ mode "resize" {
 # Раскидываем по воркспейсам
 
 assign [class="(?i)ktorrent"] → $ws2
+assign [class="(?i)skypeforlinux"] → $ws2
 
 assign [class="(?i)firefox"] → $ws3
 assign [class="(?i)chromium"] → $ws3
@@ -359,8 +369,8 @@ exec --no-startup-id $home/bin/autostart.sh
 bar {
     font pango: Roboto Condensed 9
     # for luastatus
-    # status_command cd ~/.config/i3/luastatus && exec luastatus-i3-wrapper -B no_separators cpu-usage.lua time-battery.lua alsa.lua xkb
-    status_command i3status -c $home/i3status
+    status_command cd ~/.config/i3/luastatus && exec luastatus-i3-wrapper -B no_separators cpu-usage.lua time-battery.lua alsa.lua xkb.lua
+    #status_command i3status -c $home/i3status
     position top
     workspace_buttons yes
     # tray
