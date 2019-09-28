@@ -5,17 +5,17 @@
 ## Зависимости
 
 ### Обязательные
-Что бы расстояния между окнами были [i3-gaps](https://aur.archlinux.org/packages/i3-gaps-git/)
+[i3-gaps](https://aur.archlinux.org/packages/i3-gaps-git/) - Расстояния между окнами
 
-Улучшеное dmenu [dmenu2](https://aur.archlinux.org/packages/dmenu2/)
+[rofi](https://www.archlinux.org/packages/community/x86_64/rofi/) - Лончер
 
-Иконки [Font Awesome](https://aur.archlinux.org/packages/ttf-font-awesome/)
+[Font Awesome](https://aur.archlinux.org/packages/ttf-font-awesome/) - Иконки
 
-Используемый шрифт [Font Roboto Condensed](https://aur.archlinux.org/packages/ttf-roboto/)
+[Font Roboto Condensed](https://aur.archlinux.org/packages/ttf-roboto/) - Используемый шрифт
 
-Установка обоев [Nitrogen](https://www.archlinux.org/packages/extra/x86_64/nitrogen/)
+[Nitrogen](https://www.archlinux.org/packages/extra/x86_64/nitrogen/) - Установка обоев 
 
-Мега гибкий терминал [rxvt-unicode](https://wiki.archlinux.org/index.php/Rxvt-unicode_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9))
+[rxvt-unicode](https://wiki.archlinux.org/index.php/Rxvt-unicode_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)) - Мега гибкий терминал 
 
 xrandr - программа настройки оконной системы X
 
@@ -25,7 +25,7 @@ scrot - создание скриншотов экрана
 
 В ubuntu скорее всего придётся дополнительно поставить python-configparser
 
-Установит gaps можно по вот [так](https://github.com/pasiegel/i3-gaps-install-ubuntu)
+Установит gaps можно вот [так](https://github.com/pasiegel/i3-gaps-install-ubuntu)
 
 ### Что ещё можно поставить
 
@@ -39,17 +39,15 @@ compton - композитный менеджер
 
 lxpolkit - средство для управления правами приложений пользовательского уровня (lxsession)
 
-rofi - красивая замена dmenu 'sudo pacman -S rofi'
-
 ## Установка
 Установить зависимости.
 
 ```
-yaourt -S dmenu2 luastatus-git
+yaourt -S luastatus-git
 ```
 
 ```
-sudo pacman -S i3-gaps i3lock i3blocks ttf-roboto ttf-font-awesome rxvt-unicode xorg-xrandr xorg-xbacklight nitrogen scrot
+sudo pacman -S i3-gaps i3lock i3blocks ttf-roboto ttf-font-awesome rxvt-unicode xorg-xrandr xorg-xbacklight nitrogen scrot rofi
 ```
 
 Если нужны дополнительные зависимости (tvolnoti и DvorakRus ставятся руками)
@@ -72,6 +70,9 @@ sudo pacman -S mpd lxsession compton
 
 # Themes
 ## dark
+![scrrenshot](/screenshots/rofi.png)
+
+![scrrenshot](/screenshots/hud-menu.png)
 
 ![scrrenshot](/screenshots/dark-desktop.png)
 

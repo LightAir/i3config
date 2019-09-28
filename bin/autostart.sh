@@ -18,8 +18,9 @@ setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle" &
 ./locker.sh &
 
 # Два моника
-# for two monitors
+# for two monitors.
 # xrandr --output LVDS1 --mode 1366x768 --pos 0x0 --output VGA1 --mode 1920x1080 --pos -1920x0 &
+# xrandr --output LVDS1 --primary
 
 # lxpolkit
 # lxpolkit &

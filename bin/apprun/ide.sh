@@ -1,3 +1,2 @@
 #!/bin/bash
-
-idea &&
+idea &

@@ -97,19 +97,17 @@ bindsym $mod+Return exec --no-startup-id urxvt
 # Закрыть окно mod + q
 bindcode $mod+24 kill
 
-# launcher dmenu2 mod + Ctrl + d
-bindcode $mod+Ctrl+40 exec --no-startup-id $home/bin/dmenu.sh
-
 # launcher louncher mod + d
-bindcode $mod+40 exec --no-startup-id rofi -show run
+bindcode $mod+40 exec --no-startup-id rofi -show combi
 
 # Mod + Ctrl + w
 bindcode $mod+Ctrl+25 exec --no-startup-id rofi -show window
+
 # Mod + Ctrl + s
 # bindcode $mod+Ctrl+39 exec --no-startup-id rofi -show ssh
 
-# http://www.webupd8.org/2016/06/how-to-get-unity-like-hud-searchable.html
-# bindcode $mod+38 exec ~/.config/i3/bin/i3-hud-menu.py
+# hud menu @see https://github.com/LightAir/hud-menu
+bindcode $mod+58 exec --no-startup-id $home/bin/hud-menu.py
 
 # Система
 # mod + ctrl + r
@@ -211,8 +209,8 @@ bindcode $mod+57 exec nitrogen --sort=time
 bindcode $mod+56 exec $home/bin/apprun/browser.sh
 
 # IDE
-# Mod + m
-bindcode $mod+58 exec $home/bin/apprun/ide.sh
+# Mod + i
+bindcode $mod+31 exec $home/bin/apprun/ide.sh
 
 # Функциональные клавиши
 ## скриншотим
@@ -362,7 +360,7 @@ client.background       #ffffff
 #--------------------------------------
 
 exec --no-startup-id $home/bin/autostart.sh
-# exec --no-startup-id $home/bin/i3-appmenu-service.py
+exec --no-startup-id $home/bin/hud-menu-service.py
 
 #--------------------------------------
 # Бар
@@ -376,8 +374,8 @@ bar {
     position top
     workspace_buttons yes
     # tray
-    tray_output LVDS1
-    tray_padding 1
+    tray_output primary
+    tray_padding 2
     separator_symbol ""
     colors {
         background $wbgcolor

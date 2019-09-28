@@ -1,5 +1,7 @@
 # i3config
 
+this readme is old
+
 The configuration includes i3 theme switcher.
 
 ## Depends
@@ -33,6 +35,10 @@ Customize settings your app in i3config/bin/apprun/ directory
 
 # Themes
 ## dark
+
+![scrrenshot](/screenshots/rofi.png)
+
+![scrrenshot](/screenshots/hud-menu.png)
 
 ![scrrenshot](/screenshots/dark-desktop.png)
 
