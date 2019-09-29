@@ -7,7 +7,7 @@
 ### Обязательные
 [i3-gaps](https://aur.archlinux.org/packages/i3-gaps-git/) - Расстояния между окнами
 
-[rofi](https://www.archlinux.org/packages/community/x86_64/rofi/) - Лончер
+[Rofi](https://www.archlinux.org/packages/community/x86_64/rofi/) - Лончер
 
 [Font Awesome](https://aur.archlinux.org/packages/ttf-font-awesome/) - Иконки
 
@@ -37,7 +37,9 @@ xautolock, i3lock - блокировка экрана по времени (на�
 
 mpd - плейер 
 
-compton - композитный менеджер
+calcurse - Календарь
+
+ranger - файловый менеджер
 
 lxpolkit - средство для управления правами приложений пользовательского уровня (lxsession)
 
@@ -59,7 +61,7 @@ sudo pacman -S ranger atool ffmpegthumbnailer highlight libcaca mediainfo odt2tx
 
 Если нужны дополнительные зависимости (tvolnoti и DvorakRus ставятся руками)
 ```
-sudo pacman -S mpd lxsession compton
+sudo pacman -S mpd lxsession ranger calcurse
 ```
 
 Скопировать всё содержимое этой директории в ~/.config/i3
