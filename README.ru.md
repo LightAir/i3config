@@ -52,6 +52,11 @@ yaourt -S luastatus-git
 sudo pacman -S i3-gaps i3lock i3blocks ttf-roboto ttf-font-awesome rxvt-unicode xorg-xrandr xorg-xbacklight nitrogen scrot rofi xautolock
 ```
 
+Ranger с полезными дополнениями
+```
+sudo pacman -S ranger atool ffmpegthumbnailer highlight libcaca mediainfo odt2txt poppler python-chardet sudo transmission-cli w3m
+```
+
 Если нужны дополнительные зависимости (tvolnoti и DvorakRus ставятся руками)
 ```
 sudo pacman -S mpd lxsession compton
