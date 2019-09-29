@@ -23,6 +23,8 @@ xbacklight - управление яркостью экрана,
 
 scrot - создание скриншотов экрана
 
+xautolock, i3lock - блокировка экрана по времени (настраивается в ~/.config/i3/bin/locker.sh)
+
 В ubuntu скорее всего придётся дополнительно поставить python-configparser
 
 Установит gaps можно вот [так](https://github.com/pasiegel/i3-gaps-install-ubuntu)
@@ -47,7 +49,7 @@ yaourt -S luastatus-git
 ```
 
 ```
-sudo pacman -S i3-gaps i3lock i3blocks ttf-roboto ttf-font-awesome rxvt-unicode xorg-xrandr xorg-xbacklight nitrogen scrot rofi
+sudo pacman -S i3-gaps i3lock i3blocks ttf-roboto ttf-font-awesome rxvt-unicode xorg-xrandr xorg-xbacklight nitrogen scrot rofi xautolock
 ```
 
 Если нужны дополнительные зависимости (tvolnoti и DvorakRus ставятся руками)
