@@ -16,7 +16,7 @@ end
 
 widget = {
     plugin = 'timer',
-    opts = {period = 1},
+    opts = {period = 2},
     cb = function()
         upd_cur()
         cur.user = cur.user - cur.guest
@@ -41,14 +41,9 @@ widget = {
         cur = {}
 
         if denom ~= 0 then
-            return {full_text = string.format('  %5.1f%% ', num / denom * 100)}
+            return {full_text = string.format(' %5.1f%% ', num / denom * 100)}
         end
     end,
     event = function(t)
-        local s = 'properties:'
-        for k, v in pairs(t) do
-            s = s .. ' ' .. k .. '=' .. v
-        end
-        assert(luastatus.rc{'systemsettings5', s} == 0)
     end,
 }
